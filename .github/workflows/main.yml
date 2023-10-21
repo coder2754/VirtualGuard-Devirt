@@ -29,7 +29,7 @@ jobs:
         msbuild /p:Configuration=Release /m /verbosity:normal /p:WarningLevel=0
     - name: Create ZIP
       run: |
-        Compress-Archive -Path Release/* -DestinationPath devdev.zip
+        Compress-Archive -Path bin/Release/* -DestinationPath devdev.zip
         
     - name: Archive ViewDistanceTweaks
       uses: actions/upload-artifact@v2
